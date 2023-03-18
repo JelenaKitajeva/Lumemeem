@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lumemeem.MainPage">
+
+    <StackLayout x:Name="mainLayout" BackgroundColor="White">
+        <Frame BackgroundColor="Purple" Padding="20"/>
+        <Label Text="Lumememm"
+               TextColor="Black" 
+               FontSize="Large"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"/>
+        <Frame x:Name="Hat" CornerRadius="0" Padding="20" Margin="160,0" BackgroundColor="Aquamarine" BorderColor="Black" />
+        <Frame x:Name="Head" CornerRadius="30" Padding="30" Margin="140,0" BorderColor="Black" />
+        <Frame x:Name="Body1" CornerRadius="40" Padding="40" Margin="130,0" BorderColor="Black" />
+        <Frame x:Name="Body2" CornerRadius="50" Padding="50" Margin="120,0" BorderColor="Black" />
+        <Grid x:Name="grid" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="Random_Button"
+            Text="Покрасить"
+            Grid.Row="0" Grid.Column="0"
+            HorizontalOptions="FillAndExpand"
+            Clicked="Random_Button_Clicked"
+            BackgroundColor="Purple"
+            FontFamily="Arial"
+            FontSize="12"/>
+
+            <Button x:Name="Hide_Button"
+            Text="Спрятать"
+            Grid.Row="0" Grid.Column="1"
+            HorizontalOptions="FillAndExpand"
+            Clicked="Hide_Button_Clicked"
+            BackgroundColor="Purple"
+            FontFamily="Arial"
+            FontSize="12"/>
+
+            <Button x:Name="Show_Button"
+            Text="Показать"
+            Grid.Row="0" Grid.Column="2"
+            HorizontalOptions="FillAndExpand"
+            Clicked="Show_Button_Clicked"
+            BackgroundColor="Purple"
+            FontFamily="Arial"
+            FontSize="12"/>
+
+            <Button x:Name="Jump_Button"
+            Text="Прыгать"
+            Grid.Row="1" Grid.Column="0"
+            Clicked="Jump_Button_Clicked"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="LightSteelBlue"
+            FontFamily="Arial"
+            FontSize="12"/>
+
+            <Button x:Name="RemoveHat_Button"
+            Text="Снять шляпу"
+            Grid.Row="1" Grid.Column="1"
+            HorizontalOptions="FillAndExpand"
+            Clicked="RemoveHat_Button_Clicked"
+            BackgroundColor="LightSteelBlue"
+            FontFamily="Arial"
+            FontSize="12"/>
+
+            <Button x:Name="Melt_Button"
+            Text="Таять"
+            Grid.Row="1" Grid.Column="2"
+            HorizontalOptions="FillAndExpand"
+            Clicked="Melt_Button_Clicked"
+            BackgroundColor="LightSteelBlue"
+            FontFamily="Arial"
+            FontSize="12"/>
+        </Grid>
+        <BoxView Grid.Row="1" Grid.Column="2"/>
+
+
+        <Label x:Name="Label"
+                Text="Выберите действие"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"       
+                FontSize="Medium"
+                Margin="20"/>
+    </StackLayout>
+
+
+</ContentPage>
